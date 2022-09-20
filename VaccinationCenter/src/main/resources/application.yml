@@ -1,0 +1,15 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/VaccinationCenter
+    username: root
+    password: Sushant@0798
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto:create
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+  application:
+    name: Vaccination_Center
