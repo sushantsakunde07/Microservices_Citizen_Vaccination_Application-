@@ -1,0 +1,21 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: API_GATEWAY
+
+  cloud:
+    gateway:
+      routes:
+        - id: Micro_Service
+          uri:
+            lb://CITIZEN-SERVICE
+          predicates:
+            - Path=/citizen/**
+
+        - id: Vaccination_Center
+          uri:
+            lb://VACCINATION-CENTER-SERVICE
+          predicates:
+            - Path=/vaccinationcenter/**
